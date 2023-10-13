@@ -50,7 +50,7 @@
 ## payments テーブル
 | Column        | Type       | Options                        |
 | ------------------ | ------ | ------------------------- |
-| orders        | references | null: false, foreign_key: true |
+| order         | references | null: false, foreign_key: true |
 | postcode      | string     | null: false                    |
 | prefecture_id | integer    | null: false                    |
 | city          | string     | null: false                    |
@@ -59,15 +59,3 @@
 | phone_number  | string     | null: false                    |
 ## Association
 - belongs_to :order
-
-
-
-## comments テーブル
-| Column | Type       | Options                        |
-| ------------------ | ------ | ------------------------- |
-| user   | references | null: false, foreign_key: true |
-| item   | references | null: false, foreign_key: true |
-| text   | text       | null: false                    |
-## Association
-- belongs_to :user
-- belongs_to :item
