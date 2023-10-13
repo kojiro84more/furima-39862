@@ -6,7 +6,6 @@ t.string :password, null: false
 t.string :email null:false, unique:true
 
 
-
 ## profilesテーブル
 | Type :Column, Options |
 | ----------------------|
@@ -17,7 +16,6 @@ t.string :family_name_kana,	null:false
 t.date :birth_day, null:false
 t.text :introduction,	
 t.references :user null:false,foreign_key:true
-
 
 
 ## sending_destinationsテーブル
@@ -36,14 +34,12 @@ t.integer :phone_number,	unique:true
 t.references :user,	null: false,foreign_key:true
 
 
-
 ## credit_cardsテーブル
 | Type :Column, Options |
 | ----------------------|
 t.integer :user_id,	null:false
 t.string :customer_id,	null:false
 t.string :card_id,	null:false
-
 
 
 ## itemsテーブル
@@ -63,13 +59,11 @@ t.references :seller, null:false,foreign_key:true
 t.references :buyer, foreign_key:true
 
 
-
 ## item_imgsテーブル
 | Type :Column, Options |
 | ----------------------|
 t.string :url,	null:false
 t.references :item,	null:false,foreign_key:true
-
 
 
 ## commentsテーブル
@@ -78,7 +72,6 @@ t.references :item,	null:false,foreign_key:true
 t.text :comment, null:false
 t.references :user, null:false,foreign_key:true
 t.references :item,	null:false,foreign_key:true
-
 
 
 ## categoriesテーブル
