@@ -22,7 +22,7 @@ class Item < ApplicationRecord
     validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
   end
 
-  with_options numericality: { other_than: 0 , message: "can't be blank" } do
+  with_options numericality: { other_than: 0, message: "can't be blank" } do
     validates :category_id
     validates :prefecture_id
     validates :item_status_id

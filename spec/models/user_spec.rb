@@ -11,17 +11,12 @@ RSpec.describe User, type: :model do
       end
     end
 
-
-
     context '新規登録できない場合' do
-
       it 'nicknameが空では登録できない' do
         @user.nickname = ''
         @user.valid?
         expect(@user.errors.full_messages).to include("Nickname can't be blank")
       end
-
-
 
       it 'emailが空では登録できない' do
         @user.email = ''
@@ -41,8 +36,6 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('Email is invalid')
       end
-
-
 
       it 'passwordが空では登録できない' do
         @user.password = ''
@@ -77,8 +70,6 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('Password Include both letters and numbers')
       end
-
-
 
       it 'last_nameが空では登録できない' do
         @user.last_name = ''
@@ -128,19 +119,11 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include('First name kana is invalid')
       end
 
-
       it 'birthdayが空だと登録できない' do
         @user.birthday = ''
         @user.valid?
         expect(@user.errors.full_messages).to include("Birthday can't be blank")
       end
-
-
-
-
-
-
-
     end
   end
 end
