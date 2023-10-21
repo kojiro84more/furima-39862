@@ -5,8 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :items
+  has_many :orders
 
   with_options presence: true do
+
     validates :nickname, presence: true
 
     # 全角ひらがな、全角カタカナ、漢字
