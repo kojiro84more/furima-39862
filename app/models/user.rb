@@ -8,7 +8,6 @@ class User < ApplicationRecord
   has_many :orders
 
   with_options presence: true do
-
     validates :nickname, presence: true
 
     # 全角ひらがな、全角カタカナ、漢字
